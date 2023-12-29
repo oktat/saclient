@@ -8,13 +8,40 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpRequest.Builder;
 import java.net.http.HttpResponse.BodyHandlers;
 
+/**
+ * REST API kliens készítése
+ * 
+ * Ez az osztály a Java 11-ben megjelent HttpClient osztályt használja.
+ * 
+ * Példa:
+ * <pre>
+ * Client client = new Client();
+ * String result = client.get(url);
+ * System.out.println(result);
+ * </pre>
+ * 
+ * @author Sallai András
+ * @author szit.hu
+ * @version 0.9
+ * @see     HttpClient
+ */
 public class Client {
     HttpClient client;
+
+    /**
+     * A Client osztályból készít egy példányt.
+     */
     public Client() {
-        System.out.println("Szerző: Sallai András, 2023");
         this.client = HttpClient.newHttpClient();        
     }
 
+    /**
+     * A függvény lekéri az adatokat egy REST API szerverről.
+     * Az eredményt sztringként adja vissza.
+     * 
+     * @param     url    A szerver URL-je
+     * @return    A válasz JSON formátumban
+     */
     public String get(String url) {
         HttpRequest request = genGetRequest(url);        
         return sendRequest(request);
@@ -28,7 +55,16 @@ public class Client {
         }
         return builder.build();
     }
-    
+
+    /**
+     * A metódus felvesz egy új elemet a REST API szerveren.
+     * Az eredmény a felvett elem adatai.
+     * 
+     * @param       url     A szerver URL-je
+     * @param       body    Az új elem JSON sztring formátumban
+     * @param       args    Bearer token azonosításhoz. Nem kötelező megadni.
+     * @return      A válasz JSON formátumban a felvett elem
+     */    
     public String post(String url, String body, String... args) {
         HttpRequest request = this.genPostRequest(url, body, args);        
         return this.sendRequest(request);
@@ -45,6 +81,15 @@ public class Client {
         return builder.build();
     }
 
+    /**
+     * A metódus módosít egy elemet a REST API szerveren.
+     * A módosított adatokat sztringként adja vissza.
+     * 
+     * @param       url     A szerver URL-je
+     * @param       body    A módosított elem JSON sztring formátumban
+     * @param       args    Bearer token azonosításhoz. Nem kötelező megadni.
+     * @return      A válasz JSON formátumban a módosított elem
+     */      
     public String put(String url, String body, String... args) {
         HttpRequest request = this.genPutRequest(url, body, args);
         return this.sendRequest(request);
@@ -61,6 +106,14 @@ public class Client {
         return builder.build();
     }
 
+    /**
+     * A metódus töröl egy elemet a REST API szerveren.
+     * Az eredmény {}, siker esetén.
+     * 
+     * @param       url     A szerver URL-je.
+     * @param       args    Bearer token azonosításhoz. Nem kötelező megadni.
+     * @return      A válasz {} siker esetén
+     */     
     public String delete(String url, String... args) {
         HttpRequest request = this.genDeleteRequest(url, args);
         return this.sendRequest(request);
@@ -77,7 +130,7 @@ public class Client {
         return builder.build();
     }
 
-    public String sendRequest(HttpRequest request) {
+    private String sendRequest(HttpRequest request) {
         String result = "";
         try {
             result = trySendRequest(request);                     

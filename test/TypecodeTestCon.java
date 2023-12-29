@@ -1,12 +1,18 @@
+
+import java.util.ArrayList;
+
 import hu.szit.Client;
+import hu.szit.Convert;
 
 public class TypecodeTestCon {
     static String url = "https://jsonplaceholder.typicode.com/users";
     public static void main(String[] args) {
-        // getTest();
+        getTest();
         // postTest();
-        putTest();
+        // putTest();
         // deleteTest();
+        //toObject();
+        // toJson();
     }
     public static void getTest() {
         Client client = new Client();
@@ -30,6 +36,23 @@ public class TypecodeTestCon {
         String result = client.delete(url + "/1");
         System.out.println(result);
     }
+    public static void toObject() {
+        
+        String json = "[" +
+            "{\"name\": \"Erős István\", \"city\": \"Szeged\"}," +
+            "{\"name\": \"Beri Béla\", \"city\": \"Szolnok\"}" +
+        "]";
+        ArrayList<Employee> empList = Convert.toObject(json, Employee.class);
 
-
+        for(Employee emp : empList) {
+            System.out.println(emp.name);
+        }
+    }
+    public static void toJson() {
+        ArrayList<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("John", "New York"));
+        employeeList.add(new Employee("Alice", "London"));
+        String json = Convert.toJson(employeeList);
+        System.out.println(json);
+    }
 }
