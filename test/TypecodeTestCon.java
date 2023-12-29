@@ -7,11 +7,12 @@ import hu.szit.Convert;
 public class TypecodeTestCon {
     static String url = "https://jsonplaceholder.typicode.com/users";
     public static void main(String[] args) {
-        getTest();
+        // getTest();
         // postTest();
         // putTest();
         // deleteTest();
         //toObject();
+        userToObject();
         // toJson();
     }
     public static void getTest() {
@@ -46,6 +47,14 @@ public class TypecodeTestCon {
 
         for(Employee emp : empList) {
             System.out.println(emp.name);
+        }
+    }
+    public static void userToObject() {
+        Client client = new Client();
+        String result = client.get(url);
+        ArrayList<User> userList = Convert.toObject(result, User.class);
+        for(User user : userList) {
+            System.out.println(user.name);
         }
     }
     public static void toJson() {
