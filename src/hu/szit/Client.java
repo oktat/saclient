@@ -40,7 +40,6 @@ public class Client {
      * Az eredményt sztringként adja vissza.
      * 
      * @param     url    A szerver URL-je
-     * @param     args   Bearer token azonosításhoz. Nem kötelező megadni.
      * @return           A válasz JSON formátumban
      */
     public String get(String url) {

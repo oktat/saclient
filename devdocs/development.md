@@ -44,7 +44,7 @@ A Client osztály metódusai megfelelnek az által megvalósított HTTP metódus
 * put()
 * delte()
 
-Minden metódus esetén lehetőség van egy plusz paraméter megadására, ami értelemszerűen nem kötelező.
+A push(), put() és delete() metódus esetén lehetőség van egy plusz paraméter megadására, ami értelemszerűen nem kötelező.
 Ebben a paraméterben átadható egy token az azonosításhoz.
 
 A jelenleg átadott HTTP fejléc: "Authorization":"Bearer". Előfordulhat olyan szerver, ahol a Bearer helyett más szöveget kell a token előtt átadni.
@@ -94,6 +94,7 @@ A Typicode ConvertTestCon, a Convert osztály kéziteszteléshez használható, 
 
 ## Tennivalók
 
+* A Client osztály get() metódusa is tudjon azonosítással lekérdezni.
 * Több automatikus tesztre van szükség a Client osztály esetén.
 * A Convert osztály számára automatkus tesztek írása.
 * Ha működnek az automatizált tesztek, a kézitesztek törölhetők.
