@@ -35,6 +35,16 @@ A Convert osztály generikus típusokat használ annak érdekében, hogy rugalma
 * listToJson()
 * toJson()
 
+## Java dokumentáció készítése
+
+A Java dokumentáció a scripts/create_docs.sh scripttel generálható, ami egy Bash script.
+
+```bash
+bash scripts/create_docs.sh
+```
+
+Az eredmény a docs könyvtárba kerül, ez jelenik meg a GitHub-on weblapként.
+
 ## Tesztelés
 
 A Client osztály tesztelhető automatikusan a Typicode hamis REST API segítségével.
