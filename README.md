@@ -14,6 +14,8 @@ A .jar kiadásba be vannak építve.
 
 * [https://oktat.github.io/saclient/](https://oktat.github.io/saclient/)
 
+A Client osztály képes token alapú azonosításra, ami jelenleg nincs dokumentálva.
+
 ## Letöltés
 
 * [https://github.com/oktat/saclient/releases/](https://github.com/oktat/saclient/releases/)
