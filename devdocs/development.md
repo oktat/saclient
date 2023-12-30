@@ -89,6 +89,7 @@ A Typicode ConvertTestCon, a Convert osztály kéziteszteléshez használható, 
 
 ## Tennivalók
 
+* A token alapú azonosítás dokumentálása.
 * Több automatikus tesztre van szükség a Client osztály esetén.
 * A Convert osztály számára automatkus tesztek írása.
 * Ha működnek az automatizált tesztek, a kézitesztek törölhetők.
