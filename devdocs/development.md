@@ -92,6 +92,16 @@ A TypicodeClientTestCon, egy kéziteszt a Client osztály tesztelésére. Szüks
 
 A Typicode ConvertTestCon, a Convert osztály kéziteszteléshez használható, egyik tesztben szükséges a typicode.com elérése.
 
+## Jar fájl készítése
+
+A .jar fál készítése során felesleges beletenni a teszteléshez szükséges függőségeket:
+
+* testng
+* jcommander
+* slf4-api
+
+A jelenlegi utolsó kiadásnál a bin könyvtár és a gson lett a Jar fájlba generálva.
+
 ## Tennivalók
 
 * A Client osztály get() metódusa is tudjon azonosítással lekérdezni.
