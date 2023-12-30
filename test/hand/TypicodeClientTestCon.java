@@ -2,13 +2,13 @@ package hand;
 
 import hu.szit.Client;
 
-public class TypecodeClientTestCon {
+public class TypicodeClientTestCon {
     static String host = "https://jsonplaceholder.typicode.com/users";
     public static void main(String[] args) {
-        // getTest();
-        // postTest();
-        // putTest();
-        // deleteTest();
+        getTest();
+        postTest();
+        putTest();
+        deleteTest();
     }
     public static void getTest() {
         Client client = new Client();

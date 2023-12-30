@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import hu.szit.Client;
 import hu.szit.Convert;
 
-public class TypecodeConvertTestCon {
+public class TypicodeConvertTestCon {
     static String host = "https://jsonplaceholder.typicode.com/users";
     public static void main(String[] args) {
         usersToObject();
-        // userToObject();
-        // usersToJson();
-        // userToJson();
+        userToObject();
+        usersToJson();
+        userToJson();
 
     }
     public static void usersToObject() {
