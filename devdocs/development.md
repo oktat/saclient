@@ -44,6 +44,11 @@ A Client osztály metódusai megfelelnek az által megvalósított HTTP metódus
 * put()
 * delte()
 
+Minden metódus esetén lehetőség van egy plusz paraméter megadására, ami értelemszerűen nem kötelező.
+Ebben a paraméterben átadható egy token az azonosításhoz.
+
+A jelenleg átadott HTTP fejléc: "Authorization":"Bearer". Előfordulhat olyan szerver, ahol a Bearer helyett más szöveget kell a token előtt átadni.
+
 ## Convert osztály
 
 A Convert osztály generikus típusokat használ annak érdekében, hogy rugalmasan bármilyen objektumot használhasson a felhasználó.
@@ -89,8 +94,8 @@ A Typicode ConvertTestCon, a Convert osztály kéziteszteléshez használható, 
 
 ## Tennivalók
 
-* A token alapú azonosítás dokumentálása.
 * Több automatikus tesztre van szükség a Client osztály esetén.
 * A Convert osztály számára automatkus tesztek írása.
 * Ha működnek az automatizált tesztek, a kézitesztek törölhetők.
 * Aszinkron metódusok létrehozása.
+* Az Authorization HTTP fejléc állítása konstruktorral és metódussal.
