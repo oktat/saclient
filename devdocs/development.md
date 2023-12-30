@@ -4,6 +4,24 @@
 
 A program VSCode-ban készült, Java támogatással kiegészítve, "No build tools" eszközzel.
 
+## Külső modulok
+
+A program a követkeő külső modulokat használja:
+
+Működéshez:
+
+* gson
+
+A Gson a konvertáláshoz szükséges.
+
+Teszteléshez:
+
+* testng
+* jcommander
+* slf4-api
+
+A jcommander és az slf4-api a testng függősége.
+
 ## Osztályok
 
 Két osztály van:
@@ -47,9 +65,15 @@ Az eredmény a docs könyvtárba kerül, ez jelenik meg a GitHub-on weblapként.
 
 ## Tesztelés
 
+### Automatikus teszt
+
 A Client osztály tesztelhető automatikusan a Typicode hamis REST API segítségével.
 
 * test/auto
+
+Az automatikus teszt TestNG-vel van megvalósítva.
+
+### Kézi tesztelés
 
 A Convert és a Client osztály tesztelhető kézzel:
 
