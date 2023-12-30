@@ -12,7 +12,8 @@ public class TypecodeTestCon {
         // putTest();
         // deleteTest();
         //toObject();
-        userToObject();
+        // userToObject();
+        userToJson();
         // toJson();
     }
     public static void getTest() {
@@ -62,6 +63,13 @@ public class TypecodeTestCon {
         employeeList.add(new Employee("John", "New York"));
         employeeList.add(new Employee("Alice", "London"));
         String json = Convert.toJson(employeeList);
+        System.out.println(json);
+    }
+    public static void userToJson() {
+        ArrayList<User> userList = new ArrayList<>();
+        userList.add(new User("Erős István", "erosi"));
+        userList.add(new User("Kiss Mária", "kissm"));
+        String json = Convert.toJson(userList);
         System.out.println(json);
     }
 }
