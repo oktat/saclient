@@ -2,6 +2,8 @@
 
 Java Client for REST API.
 
+Jelenleg azonosítással is képes működni a push(), put() és a delete() metódus. A fejlécben a token előtt a Bearer szó kerül átadásra, ami jelenleg nem állítható.
+
 Ez a programozói könyvtár használja a következőket:
 
 * gson
