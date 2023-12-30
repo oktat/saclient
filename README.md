@@ -12,6 +12,8 @@ Java Client for REST API
 
 ## Példa
 
+### REST API elérése
+
 Hivatkozzuk meg a saclient.jar programozói könyvtárat a projektünkben.
 
 REST API szervertől lekérés GET metódussal:
@@ -52,6 +54,8 @@ String result = client.delete(url + "/1");
 System.out.println(result);
 ```
 
+### JSON és Java objektum konverziók
+
 REST API szerverről lekért JSON sztring átalakítása Java objektummá:
 
 Készítsünk egy modellt:
@@ -69,13 +73,24 @@ public class User {
 String url = "http://valahol/valamik";
 Client client = new Client();
 String result = client.get(url);
-ArrayList<User> userList = Convert.toObject(result, User.class);
+ArrayList<User> userList = Convert.toListObject(result, User.class);
 for(User user : userList) {
     System.out.println(user.name);
 }
 ```
 
-Java objektum átalakítása JSON sztringgé:
+Átalakítás szimpla objektummá:
+
+```java
+String host = "http://valahol/valamik";
+String url = host + "/1";
+Client client = new Client();
+String result = client.get(url);
+User user = Convert.toObject(result, User.class);        
+System.out.println(user.name);
+```
+
+Java lista objektum átalakítása JSON sztringgé:
 
 A User osztályban szükség van egy konstruktorra, ami előkészíti a name és username mezőket:
 
@@ -90,13 +105,20 @@ public class User {
 }
 ```
 
-JSON sztring készítése:
+JSON sztring készítése listából:
 
 ```java
-String url = "http://valahol/valamik";
 ArrayList<User> userList = new ArrayList<>();
 userList.add(new User("Erős István", "erosi"));
 userList.add(new User("Kiss Mária", "kissm"));
-String json = Convert.toJson(userList);
+String json = Convert.listToJson(userList);
+System.out.println(json);
+```
+
+Egy Java objektum átalakítása JSON sztringgé:
+
+```java
+User user = new User("Erős István", "erosi");        
+String json = Convert.toJson(user);
 System.out.println(json);
 ```

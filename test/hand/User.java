@@ -1,3 +1,4 @@
+package hand;
 public class User {    
     String name;
     String username;
