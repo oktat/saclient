@@ -19,6 +19,11 @@ import com.google.gson.reflect.TypeToken;
 public class Convert {
 
     /**
+     * A Convert osztályból készít egy példányt.
+     */
+    public Convert() {}
+
+    /**
      * A JSON sztringet átalakítja Java lista objektummá.
      * Visszaad egy paraméterként kapott típust.
      * 
