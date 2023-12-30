@@ -1,6 +1,14 @@
 # saclient
 
-Java Client for REST API
+Java Client for REST API.
+
+Ez a programozói könyvtár használja a következőket:
+
+* gson
+* jcommander
+* slf4j-api
+
+A .jar kiadásba be vannak építve.
 
 ## Dokumentáció
 
