@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 /**
- * JSON Java objektum konvertáló
+ * JSON Java objektum konvertáló.
  * 
  * Ez az osztály függ a Gson programozói könyvtártól.
  * 

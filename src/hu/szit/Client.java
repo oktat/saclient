@@ -9,7 +9,7 @@ import java.net.http.HttpRequest.Builder;
 import java.net.http.HttpResponse.BodyHandlers;
 
 /**
- * REST API kliens készítése
+ * REST API kliens készítése.
  * 
  * Ez az osztály a Java 11-ben megjelent HttpClient osztályt használja.
  * 
