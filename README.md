@@ -12,6 +12,8 @@ Java Client for REST API
 
 ## Példa
 
+A példában felhasználók vannak egy User osztállyal, ami felcserélhető az adott feladatnak megfelelő osztállyal.
+
 ### REST API elérése
 
 Hivatkozzuk meg a saclient.jar programozói könyvtárat a projektünkben.
