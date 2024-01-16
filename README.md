@@ -28,6 +28,8 @@ A Client osztály képes token alapú azonosításra, ami jelenleg nincs dokumen
 
 ## Maven
 
+A projekt könyvtárában készítsünk egy lib könyvtárat, majd másoljuk oda .jar fájlt. A verziószámot szükség esetén javítsuk.
+
 ```xml
         <dependency>
             <groupId>hu.szit</groupId>
