@@ -26,6 +26,18 @@ A Client osztály képes token alapú azonosításra, ami jelenleg nincs dokumen
 
 * [https://github.com/oktat/saclient/releases/](https://github.com/oktat/saclient/releases/)
 
+## Maven
+
+```xml
+        <dependency>
+            <groupId>hu.szit</groupId>
+            <artifactId>saclient</artifactId>
+            <version>1.0.2</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/saclient_1.0.2.jar</systemPath>
+        </dependency>  
+```
+
 ## Példa
 
 A példában felhasználók vannak egy User osztállyal, ami felcserélhető az adott feladatnak megfelelő osztállyal.
