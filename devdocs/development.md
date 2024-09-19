@@ -104,7 +104,9 @@ A jelenlegi utolsó kiadásnál a bin könyvtár és a gson lett a Jar fájlba g
 
 ## Tennivalók
 
+* A kiadásokból ki kell venni a Gson-t.
 * A Client osztály get() metódusa is tudjon azonosítással lekérdezni.
+* A PATCH metódus fejlesztése.
 * Több automatikus tesztre van szükség a Client osztály esetén.
 * A Convert osztály számára automatkus tesztek írása.
 * Ha működnek az automatizált tesztek, a kézitesztek törölhetők.
